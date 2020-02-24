@@ -16,3 +16,10 @@ img {
 main{
     padding: 1em 2em;
 }
+.validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+    cursor: pointer;
+}
