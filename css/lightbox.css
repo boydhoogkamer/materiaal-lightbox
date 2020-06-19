@@ -15,7 +15,39 @@ img {
 }
 main{
     padding: 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2em;
+    justify-items: center;
 }
+
+main img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.card img, .card p {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.card p {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 900;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0 0 4px #000;
+}
+
 .validatie img {
     height: 1em;
     width: auto;
