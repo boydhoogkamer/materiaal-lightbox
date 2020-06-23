@@ -18,12 +18,17 @@ function CreateModal(num) {
     modal.id = 'modal';
     modal.addEventListener('click', exitModal)
 
+
+    let close = document.createElement('i');
+    close.className = 'fa fa-close';
+    close.addEventListener('click', exitModal)
     let modalContainer = document.createElement('div');
     modalContainer.className = 'modal-container';
     modalContainer.innerHTML = cardContent[num].innerHTML;
     modalContainer.addEventListener('click', function(e){
         e.stopPropagation();
     })
+    modalContainer.prepend(close);
     modal.append(modalContainer);
     document.body.append(modal);
 }

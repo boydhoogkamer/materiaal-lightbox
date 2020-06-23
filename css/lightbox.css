@@ -49,7 +49,7 @@ main img {
 }
 
 .modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -64,6 +64,49 @@ main img {
     background-color: #fff;
     max-width: 70vw;
     padding: 2em;
+    max-height: 80vh;
+    overflow: auto;
+    animation: float-in .6s cubic-bezier(.17,.67,.8,1.47) forwards;
+}
+
+@keyframes float-in {
+    from {
+        margin-top: 90vh;
+    } to {
+        margin-top: 0;
+    }
+}
+
+@-webkit-keyframes float-in {
+    from {
+        margin-top: 90vh;
+    } to {
+        margin-top: 0;
+    }
+}
+
+@-o-keyframes float-in {
+    from {
+        margin-top: 90vh;
+    } to {
+        margin-top: 0;
+    }
+}
+
+@-moz-keyframes float-in {
+    from {
+        margin-top: 90vh;
+    } to {
+        margin-top: 0;
+    }
+}
+
+@-ms-keyframes float-in {
+    from {
+        margin-top: 90vh;
+    } to {
+        margin-top: 0;
+    }
 }
 
 .validatie img {
@@ -72,4 +115,13 @@ main img {
     border: 0;
     margin: 0 .3em;
     cursor: pointer;
+}
+
+.fa-close {
+    float: right;
+    margin-bottom: 20px;
+}
+
+.fa-close:hover {
+    color: red;
 }
